@@ -1,0 +1,103 @@
+body{
+    background-color:green ;
+}
+h1{
+    text-align: center;
+    font-size:2em;
+    color:darkslategray;
+}
+div{
+    text-align: center;
+}
+table{
+    clear:both;
+    padding-left: 200px;
+}
+.page {
+    width:60% ;
+    margin:auto ;
+    background-color:greenyellow;
+}
+.pik{
+    margin-left: 150px;
+    float:left;
+    font-size: 150%;
+    border:solid 1px black;
+    width: 120px;
+    height: 150px;
+    background:url(img/pika.png) center center no-repeat ;
+    background-color: #4cb1e0;
+}
+.kresty{
+    float:left;
+    font-size: 150%;
+    border:solid 1px black;
+    width: 120px;
+    height: 150px;
+    background:url(img/kresty.png) center center no-repeat ;
+    background-color: #4cb1e0;
+
+}
+.chirwa{
+    float:left;
+    font-size: 150%;
+    border:solid 1px black;
+    width: 120px;
+    height: 150px;
+    background:url(img/chirwa.png) center center no-repeat ;
+    background-color: #4cb1e0;
+
+}
+.bubna{
+    float:left;
+    font-size: 150%;
+    border:solid 1px black;
+    width: 120px;
+    height: 150px;
+    background:url(img/bubna.png) center center no-repeat ;
+    background-color: #4cb1e0;
+
+}
+td{
+    width: 85px;
+    height: 130px;
+}
+.kresty6{background:url(img/krest_6.png) no-repeat;}
+.kresty7{background:url(img/krest_7.png) no-repeat;}
+.kresty8{background:url(img/krest_8.png) no-repeat;}
+.kresty9{background:url(img/krest_9.png) no-repeat;}
+.kresty10{background:url(img/krest_10.png) no-repeat;}
+.krestyB{background:url(img/krest_B.png) no-repeat;}
+.krestyD{background:url(img/krest_D.png) no-repeat;}
+.krestyK{background:url(img/krest_K.png) no-repeat;}
+.krestyT{background:url(img/krest_T.png) no-repeat;}
+
+.pik6{background:url(img/pik_6.png) no-repeat;}
+.pik7{background:url(img/pik_7.png) no-repeat;}
+.pik8{background:url(img/pik_8.png) no-repeat;}
+.pik9{background:url(img/pik_9.png) no-repeat;}
+.pik10{background:url(img/pik_10.png) no-repeat;}
+.pikB{background:url(img/pik_B.png) no-repeat;}
+.pikD{background:url(img/pik_D.png) no-repeat;}
+.pikK{background:url(img/pik_K.png) no-repeat;}
+.pikT{background:url(img/pik_T.png) no-repeat;}
+
+.chirwa6{background:url(img/chir_6.png) no-repeat;}
+.chirwa7{background:url(img/chir_7.png) no-repeat;}
+.chirwa8{background:url(img/chir_8.png) no-repeat;}
+.chirwa9{background:url(img/chir_9.png) no-repeat;}
+.chirwa10{background:url(img/chir_10.png) no-repeat;}
+.chirwaB{background:url(img/chir_B.png) no-repeat;}
+.chirwaD{background:url(img/chir_D.png) no-repeat;}
+.chirwaK{background:url(img/chir_K.png) no-repeat;}
+.chirwaT{background:url(img/chir_T.png) no-repeat;}
+
+.bubna6{background:url(img/bubn_6.png) no-repeat;}
+.bubna7{background:url(img/bubn_7.png) no-repeat;}
+.bubna8{background:url(img/bubn_8.png) no-repeat;}
+.bubna9{background:url(img/bubn_9.png) no-repeat;}
+.bubna10{background:url(img/bubn_10.png) no-repeat;}
+.bubnaB{background:url(img/bubn_B.png) no-repeat;}
+.bubnaD{background:url(img/bubn_D.png) no-repeat;}
+.bubnaK{background:url(img/bubn_K.png) no-repeat;}
+.bubnaT{background:url(img/bubn_T.png) no-repeat;}
