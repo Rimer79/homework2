@@ -1,3 +1,5 @@
+
+
 /**
  * Created by 18 on 09.05.2017.
  */
@@ -138,34 +140,86 @@ var pole =[
 alert ( koloda.length);
 
 
-
+// выбор козыря
 function viborKozira (){
-    var random = Math.floor(Math.random()*4);
+    var random = Math.floor(Math.random()*3);
     switch (random)
-    {case 1: kozir = 'pik';
+    {case 0: kozir = 'pik';
     break;
-        case 2 :kozir='kresty';
+        case 1 :kozir='kresty';
     break;
-        case 3: kozir ='chirwa';
+        case 2: kozir ='chirwa';
     break;
-        case 4 :kozir ='bubna';
-        default :kozir ='bubna'}
+        case 3 :kozir ='bubna';
+       }
     return kozir;
 }
 var kozir;
 
 console.log(viborKozira ());
 
-
+// вывод выбраного козыря на экран
 var displayKozir = document.getElementById("kozir");
 displayKozir.innerHTML= 'Козырная масть теперь'+' '+":"+kozir;
 
 var displayKozRam =document.getElementById(kozir);
 displayKozRam.setAttribute("class","etoon");
-/*function tasovkaKolod(massiv){
+
+//тасовка колоды
+var newKoloda = [], wipawshie = [37];
+do {
+    var i = Math.floor(Math.random() * 36);
+    var rrr = wipawshie.indexOf(i);
+    wipawshie.push(i);
+    if (rrr == -1) {
+        newKoloda.push(koloda[i]);
+    }
+} while (newKoloda.length < 36);
+console.log(newKoloda);
+console.log(wipawshie);
+
+// раздача карт
+var rukaPetia=[];
+var rukaVasia=[];
+
+for (  i = 0 ; i<newKoloda.length ; i++) {
+    if ( i%2 == 0 ) { rukaPetia.push(koloda[i]);
+    } else rukaVasia.push(newKoloda[i]);
+}
+console.log('1'+rukaPetia);
+console.log('2'+rukaVasia);
+console.log ('3'+rukaVasia[17].mast);
+
+//сраниваем по очереди карты из массива Пети и Васи и начичляем очки
+var countPetya = 0, countVasya = 0;
 
 
-}*/
+    var  mastPet , mastVas , vesPet , vesVas , pobeda = 'Победил :';
+    for ( i=17 ;i>=0 ; i-- ){
+    mastPet = rukaPetia[i].mast;
+    mastVas = rukaVasia[i].mast;
+    vesPet  = rukaPetia[i].ves;
+    vesVas =  rukaVasia[i].ves;
+
+    if (mastPet === kozir && mastVas!== kozir){
+        countPetya+=1;
+        }
+    else if (mastPet !== kozir && mastVas === kozir) {
+        countVasya+=1;
+    }
+    else if ((mastPet!==kozir && mastVas!== kozir)
+              ||(mastPet===kozir && mastVas === kozir) ) {
+        if (vesPet > vesVas ){countPetya+=1; }
+           else if (vesPet === vesVas){ countPetya+=1;countVasya+=1;}
+           else { countVasya+=1;}
+    }
+} console.log ('пети '+countPetya );console.log ('васи  '+countVasya );
+  if (countPetya >countVasya) { console.log(pobeda+'petya');}
+  else if (countVasya > countPetya ) {console.log(pobeda+'vasya');}
+  else console.log(pobeda+' drugba');
+
+
+
 
 var pozicia= document.getElementById("12");
 pozicia.setAttribute("class","kresty7");
@@ -177,5 +231,7 @@ console.log(mesto);
 
 var pozicia2= document.getElementById(mesto);
 pozicia2.setAttribute("class",karta);
+
+
 
 
