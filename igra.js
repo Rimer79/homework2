@@ -79,7 +79,7 @@ var koloda = [
     chirwaD={clas:'chirwaD',
               mast:'chirwa',
               ves:7},
-    chirwaK={clas:'chirwaD',
+    chirwaK={clas:'chirwaK',
               mast:'chirwa',
               ves:8},
     chirwaT={clas:'chirwaT',
@@ -118,7 +118,7 @@ var pole =[
     hod1={petya:'11',vasya:'12'},
     hod2={petya:'21',vasya:'22'},
     hod3={petya:'31',vasya:'32'},
-    hod4={petya:'42',vasya:'42'},
+    hod4={petya:'41',vasya:'42'},
     hod5={petya:'51',vasya:'52'},
     hod6={petya:'61',vasya:'62'},
     hod7={petya:'71',vasya:'72'},
@@ -127,7 +127,7 @@ var pole =[
     hod10={petya:'101',vasya:'102'},
     hod11={petya:'111',vasya:'112'},
     hod12={petya:'121',vasya:'122'},
-    hod13={petya:'132',vasya:'132'},
+    hod13={petya:'131',vasya:'132'},
     hod14={petya:'141',vasya:'142'},
     hod15={petya:'151',vasya:'152'},
     hod16={petya:'161',vasya:'162'},
@@ -137,7 +137,7 @@ var pole =[
 ];
 
 
-alert ( koloda.length);
+console.log( koloda.length);
 
 
 // выбор козыря
@@ -194,12 +194,25 @@ console.log ('3'+rukaVasia[17].mast);
 var countPetya = 0, countVasya = 0;
 
 
-    var  mastPet , mastVas , vesPet , vesVas , pobeda = 'Победил :';
+    var  mastPet , mastVas , vesPet , vesVas , pobeda = 'Победил :',
+        mestoPet ,mestoVas ,kartaPet , kartaVas ,poziciaPet ,poziciaVas;
     for ( i=17 ;i>=0 ; i-- ){
-    mastPet = rukaPetia[i].mast;
-    mastVas = rukaVasia[i].mast;
-    vesPet  = rukaPetia[i].ves;
-    vesVas =  rukaVasia[i].ves;
+    mastPet = rukaPetia[i].mast ;
+    mastVas = rukaVasia[i].mast ;
+    vesPet  = rukaPetia[i].ves ;
+    vesVas =  rukaVasia[i].ves ;
+
+        mestoPet = pole[i].petya ;
+        mestoVas = pole[i].vasya ;
+        kartaPet = rukaPetia[i].clas ;
+        kartaVas = rukaVasia [i].clas;
+
+        poziciaPet = document.getElementById(mestoPet);
+        poziciaPet.setAttribute("class",kartaPet);
+
+        poziciaVas = document.getElementById(mestoVas);
+        poziciaVas.setAttribute("class",kartaVas);
+
 
     if (mastPet === kozir && mastVas!== kozir){
         countPetya+=1;
@@ -218,19 +231,11 @@ var countPetya = 0, countVasya = 0;
   else if (countVasya > countPetya ) {console.log(pobeda+'vasya');}
   else console.log(pobeda+' drugba');
 
+var displayPobeditel = document.getElementById("chet");
+displayPobeditel.innerHTML= 'Конечный счет :'+countPetya+" "+":"+' '+countVasya ;
 
 
 
-var pozicia= document.getElementById("12");
-pozicia.setAttribute("class","kresty7");
-
-var karta= koloda[16].clas;
-console.log(karta);
-var mesto = pole[7].petya;
-console.log(mesto);
-
-var pozicia2= document.getElementById(mesto);
-pozicia2.setAttribute("class",karta);
 
 
 
