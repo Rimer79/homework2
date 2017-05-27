@@ -1,7 +1,10 @@
+
+
 body{
     background-color:green ;
 }
 h1{
+
     text-align: center;
     font-size:2em;
     color:darkslategray;
@@ -61,6 +64,7 @@ table{
     background:url(img/bubna.png) center center no-repeat ;
     background-color:chartreuse ;
     opacity: 1;
+
 }
 .etoon{
     display: none;
@@ -111,3 +115,20 @@ td{
 .bubnaD{background:url(img/bubn_D.png) no-repeat;}
 .bubnaK{background:url(img/bubn_K.png) no-repeat;}
 .bubnaT{background:url(img/bubn_T.png) no-repeat;}
+
+div {
+    border : solid black 1px ;
+}
+#start {
+    width: 85px;
+    height: 130px;
+
+}
+#start_v{
+    width: 85px;
+    height: 130px;
+}
+#start_p {
+    width: 85px;
+    height: 130px;
+}
